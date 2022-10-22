@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.Clear();
+Console.WriteLine();
+
+int[] num = new int[2];
+string Result = "не является";
+
+for (int i = 0; i < 2; i++)
+{
+    num[i] = new Random().Next(1, 1000);
+}
+
+if (num[0] / num[1] == num[1]) Result = Result.Replace("не ", "");
+
+Console.WriteLine($"Число {num[0]} {Result} квадратом числа {num[1]}");
+Console.WriteLine();
